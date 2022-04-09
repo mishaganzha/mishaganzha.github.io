@@ -428,15 +428,17 @@ color: #152934;
     
 }
 .lets__conteiner{
+    z-index: 2;
     background: #FAFAFA;
+    box-shadow: 50px 130px 100px rgba(0, 0, 0, 0.145947);
 }
 .lets__body{
-    z-index: 2;
+    
     margin-top: 150px;
     margin-bottom: -190px;
     padding: 70px 0 70px calc((100vw - 1110px)/2);
     background: #FAFAFA;
-    box-shadow: 50px 130px 100px rgba(0, 0, 0, 0.145947);
+    
 }
 .lets__title{
     font-family: 'Poppins';
@@ -599,7 +601,7 @@ align-self: flex-end;
         .model__content{
 
             max-width: 735px;
-            margin-left: 150px;
+            margin-left: 13%;
             margin-bottom: 50px;
         }
         ._conteiner-left .main-box{
@@ -642,7 +644,7 @@ align-self: flex-end;
         }
         .deation__column{
             
-            flex: 0 1 40%;
+            flex: 1 1 40%;
             display: flex;
             flex-direction: column;
             height: 223px;
@@ -686,6 +688,11 @@ margin-right: 7%;
    padding-right: 30px;
 
 }
+.footer-block2__column{
+    flex: 1 1 40%;
+    
+    padding-right: 10px;
+}
 .footer__conteiner{
     display: flex;
     flex-direction: column;
@@ -709,4 +716,71 @@ margin-right: 7%;
     margin-left: 7%;
 }
     }
-   
+    @media(max-width:860px){
+        .footer-block2__body{
+            display: flex;
+            flex-wrap: wrap;
+            margin-top:113px ;
+            justify-content: center;
+            
+        }
+        .footer-block2__column{
+            flex: 1 1 40%;
+            margin-top: 20px;
+        }
+        .footer-block2__column-email{
+            margin-top: 20px;
+            flex: 1 1 40%;
+        }
+    }
+    @media(max-width:781px){
+        .strategy__body{
+            flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .strategy__column{  
+           
+            max-width: 800px;
+            
+        }
+        .strategy__column:not(:last-child){
+            padding-bottom: 40px;
+            margin-left: 7%;
+        }
+        .lets__title{
+            font-size: 50px;
+        }
+.main-block__title{
+font-size: 50px;}
+._conteiner-left .main-box{
+    top: 822px;
+    left: 92px;
+}
+._conteiner-right .main-box{
+    top: 842px;
+    right: 92px;
+}
+.main-content{
+    margin-right: 10%;
+    }
+    }
+    @media(max-width:500px){
+        .main-box{
+
+            max-width: 453px;
+            max-height: 343px;
+
+        }
+
+}
+@media(max-width:700px){
+    .deation__column{
+            
+        flex: 1 1 80%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+}
