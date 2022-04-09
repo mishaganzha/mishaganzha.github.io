@@ -709,19 +709,4 @@ margin-right: 7%;
     margin-left: 7%;
 }
     }
-    @media(max-width:770px){
-         .deation__item{
-            flex-wrap: wrap;
-            margin-top: 60px;
-            display: flex;
-            justify-content: center;
-            
-        }
-        .deation__column{
-            
-            flex: 0 1 70%;
-            display: flex;
-            flex-direction: column;
-            height: 223px;
-        }
-    }
+   
