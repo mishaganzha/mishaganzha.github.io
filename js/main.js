@@ -1,4 +1,4 @@
-const mainBlock = document.querySelector(".main-block");
+const mainBlock = document.querySelector(".main-block__title");
 const headerContainer = document.querySelector(".header__conteiner");
 document.addEventListener("scroll", function () {
     if (window.pageYOffset >= 70) {
@@ -17,7 +17,7 @@ document.addEventListener("scroll", function () {
         );
         mainBlock.setAttribute(
             "style",
-            "margin-top: 0;"
+            "margin-top: 80;"
         );
     }
 });
