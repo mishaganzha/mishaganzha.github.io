@@ -66,3 +66,149 @@ function rechangeItem(thisItem) {
         }
     }
 }
+
+const arrGofr = ["s", "m", "l", "kas"];
+let gofr = "s";
+let itemColor = 0;
+let selectorCheckbox1 = document.querySelector('.checkbox__selector')
+let checkbox1 = "door";
+function changeType(thisType) {
+    for (
+        let i = 0;
+        i < document.getElementsByClassName("selector-item__icon").length;
+        i++
+    ) {
+        if (document.getElementsByClassName("selector-item__icon")[i] == thisType) {
+            gofr = arrGofr[i];
+            document.getElementsByClassName("selector-item__icon")[
+                i
+            ].setAttribute("style", "box-shadow:0 0 10px rgb(20, 38, 201); border:1px solid rgb(20, 38, 201);");
+            if (itemColor < 15) {
+                document.getElementById("change__image").src = "img/konfig/garage/" + gofr + "/" + itemColor + ".jpg";
+                if (selectorCheckbox1.checked) {
+                    document.getElementById("change__image").src = "img/konfig/garage/" + gofr + "/door/" + itemColor + ".jpg";
+                }
+            }
+        }
+        if (itemColor >= 15) {
+            document.getElementsByClassName("color-item__box")[
+                0
+            ].setAttribute("style", "opacity: 1; box-shadow:0 0 10px rgb(20, 38, 201); border:1px solid rgb(20, 38, 201);");
+            document.getElementById("change__image").src = "img/konfig/garage/" + gofr + "/" + 0 + ".jpg";
+            if (selectorCheckbox1.checked) {
+                document.getElementById("change__image").src = "img/konfig/garage/" + gofr + "/door/" + 0 + ".jpg";
+            }
+        }
+        if (document.getElementsByClassName("selector-item__icon")[i] != thisType) {
+            document.getElementsByClassName("selector-item__icon")[
+                i
+            ].setAttribute("style", "box-shadow: none; border: none;");
+        }
+        if (gofr == "m") {
+            for (
+                let a = 0;
+                a < document.getElementsByClassName("color-item__m").length;
+                a++
+            ) {
+                document.getElementsByClassName("color-item__m")[
+                    a
+                ].setAttribute("style", "display:block");
+            }
+        }
+        if (gofr != "m") {
+            for (
+                let a = 0;
+                a < document.getElementsByClassName("color-item__m").length;
+                a++
+            ) {
+                document.getElementsByClassName("color-item__m")[
+                    a
+                ].setAttribute("style", "display:none");
+            }
+        }
+
+    }
+}
+
+function changeImage(thisImage) {
+    for (
+        let i = 0;
+        i < document.getElementsByClassName("color-item__box").length;
+        i++
+    ) {
+
+        if (document.getElementsByClassName("color-item__box")[i] == thisImage) {
+            itemColor = i;
+            document.getElementById("change__image").src = "img/konfig/garage/" + gofr + "/" + i + ".jpg";
+            if (selectorCheckbox1.checked) {
+                document.getElementById("change__image").src = "img/konfig/garage/" + gofr + "/door/" + i + ".jpg";
+            }
+            document.getElementsByClassName("color-item__box")[
+                i
+            ].setAttribute("style", "opacity: 1; box-shadow:0 0 10px rgb(20, 38, 201); border:1px solid rgb(20, 38, 201);");
+
+        }
+        if (document.getElementsByClassName("color-item__box")[i] != thisImage) {
+
+            document.getElementsByClassName("color-item__box")[
+                i
+            ].setAttribute("style", "opacity: 0.6; box-shadow: none; border: none;");
+
+        }
+
+        if (gofr == "m") {
+            for (
+                let a = 0;
+                a < document.getElementsByClassName("color-item__m").length;
+                a++
+            ) {
+
+                document.getElementsByClassName("color-item__m")[
+                    a
+                ].setAttribute("style", "display:block");
+            }
+        }
+        if (gofr != "m") {
+            for (
+                let a = 0;
+                a < document.getElementsByClassName("color-item__m").length;
+                a++
+            ) {
+                document.getElementsByClassName("color-item__m")[
+                    a
+                ].setAttribute("style", "display:none");
+            }
+        }
+        if (i >= 15 & gofr == "m") {
+            for (
+                let i = 15;
+                i < document.getElementsByClassName("color-item__box").length;
+                i++
+            ) {
+                if (document.getElementsByClassName("color-item__box")[i] == thisImage) {
+                    itemColor = i;
+                    document.getElementsByClassName("color-item__box")[
+                        i
+                    ].setAttribute("style", "display:block; opacity: 1; box-shadow:0 0 10px rgb(20, 38, 201); border:1px solid rgb(20, 38, 201);");
+
+                }
+                if (document.getElementsByClassName("color-item__box")[i] != thisImage) {
+
+                    document.getElementsByClassName("color-item__box")[
+                        i
+                    ].setAttribute("style", "display:block; opacity: 0.6; box-shadow: none; border: none;");
+                }
+            }
+        }
+
+    }
+}
+
+function checkboxSelector1() {
+    if (selectorCheckbox1.checked) {
+        document.getElementById("change__image").src = "img/konfig/garage/" + gofr + "/door/" + itemColor + ".jpg";
+    }
+    else {
+        document.getElementById("change__image").src = "img/konfig/garage/" + gofr + "/" + itemColor + ".jpg";
+    }
+}
