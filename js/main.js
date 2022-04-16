@@ -91,12 +91,13 @@ function changeType(thisType) {
             }
         }
         if (itemColor >= 15) {
+            itemColor = 0;
             document.getElementsByClassName("color-item__box")[
                 0
             ].setAttribute("style", "opacity: 1; box-shadow:0 0 10px rgb(20, 38, 201); border:1px solid rgb(20, 38, 201);");
-            document.getElementById("change__image").src = "img/konfig/garage/" + gofr + "/" + 0 + ".jpg";
+            document.getElementById("change__image").src = "img/konfig/garage/" + gofr + "/" + itemColor + ".jpg";
             if (selectorCheckbox1.checked) {
-                document.getElementById("change__image").src = "img/konfig/garage/" + gofr + "/door/" + 0 + ".jpg";
+                document.getElementById("change__image").src = "img/konfig/garage/" + gofr + "/door/" + itemColor + ".jpg";
             }
         }
         if (document.getElementsByClassName("selector-item__icon")[i] != thisType) {
