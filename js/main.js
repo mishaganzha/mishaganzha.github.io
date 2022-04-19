@@ -147,6 +147,9 @@ function changeType(thisType) {
 
             }
             if ((itemColor >= 16 & gofr == "s") || (itemColor >= 21 & gofr == "kas") || (itemColor > 21 & gofr != "l")) {
+                document.getElementsByClassName("color-item__box")[
+                    itemColor
+                ].setAttribute("style", "display:block; box-shadow:none; border:none");
                 itemColor = 0;
                 document.getElementById("change__image").src = "img/konfig/garage/" + gofr + "/" + itemColor + ".jpg";
 
