@@ -5,57 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Forward</title>
 </head>
 
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header__main-block main-block__garage">
-                <div class="header__main-block-black">
-                    <div class="header__tel">
-                        <div class="tel-header">044 459 34 27</div>
-                        <div class="tel-header">044 459 34 27</div>
-                    </div>
-                    <div class="header__logo">
-                        <a href="" class="header__logo-item">
-                            <img src="img/Logo/logo.png" alt="">
-                        </a>
-                    </div>
-                    <div class="header__conteiner">
-
-                        <nav class="header__menu menu">
-                            <ul class="menu__list">
-                                <li class="menu__item">
-                                    <a href="index.html" class="menu__link">ГЛАВНАЯ
-                                    </a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="" class="menu__link">О КОМПАНИИ</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="" class="menu__link">ДЛЯ ДИЛЛЕРОВ</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="" class="menu__link">ПОЧЕМУ HORMANN?</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="" class="menu__link">ЗАПРОС ПРЕДЛОЖЕНИЯ</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
 
 
-                    <div class="header__main-block__content">
-                        <h1 class="header__main-block__title">Lorem ipsum dolor sit.</h1>
-                        <div class="header__main-block__sub-title">Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Ex
-                            neque dolorum nulla totam provident excepturi?</div>
-                    </div>
-                </div>
+            <div class="header__tel header__tel-dark">
+                <div class="tel-header">044 459 34 27</div>
+                <div class="tel-header">044 459 34 27</div>
             </div>
+            <div class="header__logo">
+                <a href="" class="header__logo-item">
+                    <img src="img/Logo/logo.png" alt="">
+                </a>
+            </div>
+            <div class="header__conteiner">
+
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a href="index.html" class="menu__link">ГОЛОВНА
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">ПРО КОМПАНІЮ</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">ДЛЯ ДИЛЕРІВ</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">ЧОМУ HÖRMANN?</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">ЗАПИТ ПРОПОЗИЦІЇ</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+            </div>
+
+            <h1 class="header__main-block__title"></h1>
+
         </header>
         <main class="page">
             <section class="konfig">
@@ -72,13 +69,12 @@
                                 <li><a href="" class="sub-menu__link">ГАЛЕРЕЯ</a></li>
                             </ul>
                             <div class="color-konfig__sub-title">
-                                RAL-кольори доступні для 5 декорів под дерево та для 1 декору під Titan
+                                RAL-кольори доступні для 5 декорів під дерево та для 1 декору під Titan
                             </div>
                             <div class="color-konfig__add konfig-add">
                                 <div class="konfig-add__title konfig__title">Додаткове оснащення</div>
                                 <div class="konfig-add__selector">
-                                    <p class="selector__checkbox">Вбудовані двері</p><input type="checkbox" name=""
-                                        class="checkbox__selector" onclick="checkboxSelector1()">
+
                                 </div>
                             </div>
                         </div>
@@ -86,33 +82,37 @@
                             <div class="image-konfig__img">
                                 <img id="change__image" src="img/konfig/garage/s/0.jpg" alt="">
                             </div>
-                            <div class="image-konfig__selector">
-                                <div class="image-konfig__selector-item selector-item">
-                                    <div onclick="changeType(this)" class="selector-item__icon icon-active"><img
-                                            src="img/konfig/garage/icons/s.png" alt="">
+                            <div class="image-konfig__selector-flex">
+                                <div class="image-konfig__selector">
+                                    <div class="image-konfig__selector-item selector-item">
+                                        <div onclick="changeType(this)" class="selector-item__icon icon-active"><img
+                                                src="img/konfig/garage/icons/s.png" alt="">
+                                        </div>
+                                        <div class="selector-item__text">
+                                            S-гофр UA</div>
                                     </div>
-                                    <div class="selector-item__text">
-                                        S-гофр UA</div>
-                                </div>
-                                <div class="image-konfig__selector-item selector-item">
-                                    <div onclick="changeType(this)" class="selector-item__icon"><img
-                                            src="img/konfig/garage/icons/m.png" alt="">
+                                    <div class="image-konfig__selector-item selector-item">
+                                        <div onclick="changeType(this)" class="selector-item__icon"><img
+                                                src="img/konfig/garage/icons/m.png" alt="">
+                                        </div>
+                                        <div class="selector-item__text">
+                                            M-гофр</div>
                                     </div>
-                                    <div class="selector-item__text">
-                                        M-гофр</div>
-                                </div>
-                                <div class="image-konfig__selector-item selector-item">
-                                    <div class="selector-item__icon"><img src="img/konfig/garage/icons/l.png" alt="">
+                                    <div class="image-konfig__selector-item selector-item">
+                                        <div onclick="changeType(this)" class="selector-item__icon"><img
+                                                src="img/konfig/garage/icons/l.png" alt="">
+                                        </div>
+                                        <div class="selector-item__text">
+                                            L-гофр UA
+                                        </div>
                                     </div>
-                                    <div class="selector-item__text">
-                                        L-гофр UA
-                                    </div>
-                                </div>
-                                <div class="image-konfig__selector-item selector-item">
-                                    <div class="selector-item__icon"><img src="img/konfig/garage/icons/kas.png" alt="">
-                                    </div>
-                                    <div class="selector-item__text">
-                                        Касета
+                                    <div class="image-konfig__selector-item selector-item">
+                                        <div onclick="changeType(this)" class="selector-item__icon"><img
+                                                src="img/konfig/garage/icons/kas.png" alt="">
+                                        </div>
+                                        <div class="selector-item__text">
+                                            Касета
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -124,73 +124,218 @@
 
                                     <div class="color-item">
                                         <div onclick="changeImage(this)" class="color-item__box color0"></div>
+                                        <div class="color-item__text">RAL 9016</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color1"></div>
+                                        <div class="color-item__text">RAL 1015</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color2"></div>
+                                        <div class="color-item__text">RAL 6005</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color3"></div>
+                                        <div class="color-item__text">RAL 6009</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color4"></div>
+                                        <div class="color-item__text">RAL 7012</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color5"></div>
+                                        <div class="color-item__text">RAL 7015</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color6"></div>
+                                        <div class="color-item__text">RAL 7016</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color7"></div>
+                                        <div class="color-item__text">RAL 7030</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color8"></div>
+                                        <div class="color-item__text">RAL 7035</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color9"></div>
+                                        <div class="color-item__text">RAL 7039</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color10"></div>
+                                        <div class="color-item__text">RAL 7040</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color11"></div>
+                                        <div class="color-item__text">RAL 8028</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color12"></div>
+                                        <div class="color-item__text">RAL 9005</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color13"></div>
+                                        <div class="color-item__text">RAL 9006</div>
                                     </div>
                                     <div class="color-item ">
                                         <div onclick="changeImage(this)" class="color-item__box color14"></div>
-                                    </div>
-
-                                    <div class="color-item ">
-                                        <div onclick="changeImage(this)" class="color-item__box color15 color-item__m">
-                                        </div>
+                                        <div class="color-item__text">RAL 9007</div>
                                     </div>
                                     <div class="color-item ">
-                                        <div onclick="changeImage(this)" class="color-item__box color16 color-item__m">
+                                        <div onclick="changeImage(this)" class="color-item__box color15">
                                         </div>
+                                        <div class="color-item__text">CH 703</div>
                                     </div>
-                                    <div class="color-item ">
-                                        <div onclick="changeImage(this)" class="color-item__box color17 color-item__m">
+                                    <div class="color-item color-item__kas">
+                                        <div onclick="changeImage(this)" class="color-item__box color16 ">
                                         </div>
+                                        <div class="color-item__text">Темний дуб</div>
                                     </div>
-                                    <div class="color-item ">
-                                        <div onclick="changeImage(this)" class="color-item__box color18 color-item__m">
+                                    <div class="color-item color-item__kas">
+                                        <div onclick="changeImage(this)" class="color-item__box color17 ">
                                         </div>
+                                        <div class="color-item__text">Золотий дуб</div>
                                     </div>
-                                    <div class="color-item ">
-                                        <div onclick="changeImage(this)" class="color-item__box color19 color-item__m">
+                                    <div class="color-item color-item__kas">
+                                        <div onclick="changeImage(this)" class="color-item__box color18 ">
                                         </div>
+                                        <div class="color-item__text">Нічний дуб</div>
                                     </div>
-                                    <div class="color-item ">
-                                        <div onclick="changeImage(this)" class="color-item__box color20 color-item__m">
+                                    <div class="color-item color-item__kas">
+                                        <div onclick="changeImage(this)" class="color-item__box color19 ">
                                         </div>
+                                        <div class="color-item__text">Rosewood</div>
+                                    </div>
+                                    <div class="color-item color-item__kas">
+                                        <div onclick="changeImage(this)" class="color-item__box color20 ">
+                                        </div>
+                                        <div class="color-item__text">Winchester Oak</div>
+                                    </div>
+                                    <div class="color-item color-item__m">
+                                        <div onclick="changeImage(this)" class="color-item__box color21 ">
+                                        </div>
+                                        <div class="color-item__text">Titan Metallic CH 703</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color22 ">
+                                        </div>
+                                        <div class="color-item__text">Бамбук</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color23 ">
+                                        </div>
+                                        <div class="color-item__text">Бежевий</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color24 ">
+                                        </div>
+                                        <div class="color-item__text">Бетон</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color25 ">
+                                        </div>
+                                        <div class="color-item__text">Спалений дуб</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color26 ">
+                                        </div>
+                                        <div class="color-item__text">Вишня</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color27 ">
+                                        </div>
+                                        <div class="color-item__text">Ялина</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color28 ">
+                                        </div>
+                                        <div class="color-item__text">Grigio</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color29 ">
+                                        </div>
+                                        <div class="color-item__text">Grigio scuro</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color30 ">
+                                        </div>
+                                        <div class="color-item__text">Moca</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color31">
+                                        </div>
+                                        <div class="color-item__text">Дуб натуральний</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color32 ">
+                                        </div>
+                                        <div class="color-item__text">Горіх бальза- <br> мічний лісний</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color33 ">
+                                        </div>
+                                        <div class="color-item__text">Горіх лісний нату- <br> ральний</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color34 ">
+                                        </div>
+                                        <div class="color-item__text">Rusty Oak</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color35 ">
+                                        </div>
+                                        <div class="color-item__text">Rusty Steel</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color36 ">
+                                        </div>
+                                        <div class="color-item__text">Sapeli</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color37 ">
+                                        </div>
+                                        <div class="color-item__text">Sheffield</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color38 ">
+                                        </div>
+                                        <div class="color-item__text">Teak</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color39 ">
+                                        </div>
+                                        <div class="color-item__text">Used Look</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color40 ">
+                                        </div>
+                                        <div class="color-item__text">Горіч коло- <br> ніальний</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color41 ">
+                                        </div>
+                                        <div class="color-item__text">Горіх землистий</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color42 ">
+                                        </div>
+                                        <div class="color-item__text">White brushed</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color43 ">
+                                        </div>
+                                        <div class="color-item__text">Дуб білий</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color44 ">
+                                        </div>
+                                        <div class="color-item__text">Дуб білий прома- <br> слений</div>
+                                    </div>
+                                    <div class="color-item color-item__l">
+                                        <div onclick="changeImage(this)" class="color-item__box color45 ">
+                                        </div>
+                                        <div class="color-item__text">Дуб білений</div>
                                     </div>
                                 </div>
 

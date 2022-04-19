@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Forward</title>
 </head>
 
@@ -28,20 +30,20 @@
                         <nav class="header__menu menu">
                             <ul class="menu__list">
                                 <li class="menu__item">
-                                    <a href="index.html" class="menu__link">ГЛАВНАЯ
+                                    <a href="index.html" class="menu__link">ГОЛОВНА
                                     </a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="" class="menu__link">О КОМПАНИИ</a>
+                                    <a href="" class="menu__link">ПРО КОМПАНІЮ</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="" class="menu__link">ДЛЯ ДИЛЛЕРОВ</a>
+                                    <a href="" class="menu__link">ДЛЯ ДИЛЕРІВ</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="" class="menu__link">ПОЧЕМУ HORMANN?</a>
+                                    <a href="" class="menu__link">ЧОМУ HÖRMANN?</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="" class="menu__link">ЗАПРОС ПРЕДЛОЖЕНИЯ</a>
+                                    <a href="" class="menu__link">ЗАПИТ ПРОПОЗИЦІЇ</a>
                                 </li>
                             </ul>
                         </nav>
@@ -67,14 +69,21 @@
                     <div class="services__body">
                         <div onclick="window.location.href='garage.html'" onmouseover="changeItem(this)"
                             onmouseout="rechangeItem(this)" class="service__item item-service item-service__bg1">
-                            <h2 class="item-service__title">ГАРАЖНЫЕ ВОРОТА</h2>
+                            <h2 class="item-service__title">ГАРАЖНІ ВОРОТА</h2>
                             <p class="item-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Alias, tempore.</p>
                         </div>
                         <div onmouseover="changeItem(this)" onmouseout="rechangeItem(this)"
                             class="service__item item-service item-service__bg2">
 
-                            <h2 class="item-service__title">ВХОДНЫЕ ДВЕРИ</h2>
+                            <h2 class="item-service__title">ВХІДНІ ДВЕРІ</h2>
+                            <p class="item-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Alias, tempore.</p>
+                        </div>
+                        <div onmouseover="changeItem(this)" onmouseout="rechangeItem(this)"
+                            class="service__item item-service item-service__bg4">
+
+                            <h2 class="item-service__title">МІЖКІМНАТНІ ДВЕРІ</h2>
                             <p class="item-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Alias, tempore.</p>
                         </div>
@@ -84,51 +93,40 @@
                             <p class="item-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Alias, tempore.</p>
                         </div>
-                        <div onmouseover="changeItem(this)" onmouseout="rechangeItem(this)"
-                            class="service__item item-service item-service__bg4">
-
-                            <h2 class="item-service__title">МЕЖКОМНАТНЫЕ ДВЕРИ</h2>
-                            <p class="item-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Alias, tempore.</p>
-                        </div>
                     </div>
                 </div>
             </section>
             <section class="brands">
-                <div class="brands__title main-title">
-                    <h1>БРЕНДЫ</h1>
-                </div>
-                <div class="brands__block-img block-brands">
-                    <div class="block-brands__body">
-                        <div class="block-brands__item">
-                            <img src="img/Logo/hormann.png" alt="">
-                        </div>
-                        <div class="block-brands__item">
-                            <img src="img/Logo/came.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="brands__body">
-                    <div class="brands__text">
-                        <div class="brands__text-block">
-                            На рынке ворот, дверей и автоматики мы с 2004 года. В настоящее время специалисты компании
-                            способны решать самые сложные
-                            и интересные задачи в своей области.
-                            Мы являемся официальными представителями торговых марок Hormann KG (Германия) и Came
-                            cancelli automatici (Италия) в
-                            Украине.
-                            Наша компания специализируется на поставке всех типов дверей, автоматических ворот,
-                            промышленных ворот, электроприводов,
-                            шлагбаумов для частных и коллективных гаражей, въездов на территорию дома и предприятия.
-                            Промышленные автоматические
-                            ворота от компании Форвард находят применение во всех областях
+                <div class="brands__conteiner">
+                    <h1 class="brands__title">БРЕНДИ</h1>
+                    <div class="brands__block1">
+                        <div class="brands__block1-text text-block">
+                            <div class="text-block__wrapper">
+                                <div class="text-block__logo-flex">
+                                    <div class="text-block__logo"><img src="img/Logo/logoHormann.jpg" alt=""></div>
+                                    <div class="text-block__logo"><img src="img/Logo/cameLogo.png" alt=""></div>
+                                </div>
+                                <h2 class="text-block__sub-title">Lorem ipsum dolor sit amet.</h2>
+                                <div class="text-block__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Veniam natus adipisci facere officia excepturi labore culpa consectetur est debitis,
+                                    qui unde distinctio. Incidunt ipsa, nisi voluptatem quasi ipsam illum repudiandae.
+                                </div>
+                                <div class="text-block__link"><a href="">>>Lorem ipsum dolor sit amet.</a></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="brands__img">
-                        <div class="brands__img-block">
-                            <img src="img/brands.jpg" alt="">
+                </div>
+                <div class="brands__block2">
+                    <div class="brands__block2-wrapper">
+                        <div class="brands__block2-bg"></div>
+                        <div class="text-block2__wrapper">
+                            <h2 class="text-block__sub-title">Lorem ipsum dolor sit amet.</h2>
+                            <div class="text-block__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Quibusdam quasi incidunt, magnam, porro esse modi eligendi itaque voluptate eius rem
+                                earum magni hic nisi! Veniam ipsa cum beatae itaque voluptates.
+                            </div>
+                            <div class="text-block__link"><a href="">>>Lorem ipsum dolor sit amet.</a></div>
                         </div>
-                        <div class="brands__img-block2"></div>
                     </div>
                 </div>
             </section>
