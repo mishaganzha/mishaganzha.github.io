@@ -191,6 +191,63 @@ h6 {
   margin-right: 10px;
 }
 
+.main-link__block {
+  position: relative;
+}
+
+.sub-menu1 {
+  position: absolute;
+  top: -880px;
+  left: -10px;
+}
+
+.sub-menu1__list {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  opacity: 0;
+  width: 200px;
+  color: #00558b;
+  background-color: #ffff;
+}
+
+.sub-menu1__item {
+  height: 0;
+  padding: 10px;
+  opacity: 0;
+  -webkit-transition: height 0.3s, opacity 0.4s;
+  transition: height 0.3s, opacity 0.4s;
+}
+
+.sub-menu1__link {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  color: inherit;
+  height: inherit;
+  opacity: 0;
+}
+
+.sub-menu1__link:hover {
+  color: #ffeb00;
+  text-decoration: underline;
+}
+
+.main-link__block:hover .sub-menu1 {
+  top: 80px;
+}
+
+.main-link__block:hover .sub-menu1__item {
+  opacity: 1;
+  height: 40px;
+}
+
+.main-link__block:hover .sub-menu1__list {
+  opacity: 1;
+}
+
+.main-link__block:hover .sub-menu1__link {
+  opacity: 1;
+}
+
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -560,14 +617,12 @@ h6 {
   font-size: 20px;
 }
 
-.konfig {
-  margin-bottom: 30px;
-}
-
-.konfig__title {
-  text-align: center;
+.main-title2 {
   font-size: 50px;
-  margin-top: 30px;
+  color: #424642;
+  text-align: center;
+  font-weight: 500;
+  margin: 100px 0 30px 0;
 }
 
 .konfig__conteiner {
@@ -650,7 +705,7 @@ h6 {
 
 .image-konfig__selector {
   text-align: center;
-  margin-top: -30px;
+  margin-top: -60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -954,4 +1009,143 @@ h6 {
   display: block;
   font-size: 20px;
   padding-right: 20px;
+}
+
+.main-title__hormann {
+  margin: 100px 0 30px 0;
+}
+
+.whyHormann__img-conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.whyHormann__bg {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  background: #ffeb00;
+}
+
+.whyHormann__bg2 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.whyHormann__bg3 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  background-color: #00558b;
+}
+
+.whyHormann__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+}
+
+.whyHormann__img img {
+  width: 100%;
+}
+
+.whyHormann__imgAbout {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
+}
+
+.whyHormann__imgAbout img {
+  width: 100%;
+}
+
+.whyHormann__conteiner {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.whyHormann__body {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.whyHormann__text {
+  padding-top: 10px;
+  text-align: justify;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+.about__text {
+  text-align: justify;
+}
+
+.about__text-body {
+  width: 100%;
+  padding: 0 5%;
+}
+
+.about__conteiner {
+  padding: 60px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about__conteiner-right {
+  background-color: #aac1aa;
+  color: #ffff;
+}
+
+.about__conteiner-center {
+  padding: 0;
+  margin: 60px 0 0px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(0.4turn, rgba(0, 0, 0, 0.5) 40%, rgba(0, 0, 0, 0)), url("../img/contentImg/about2.jpg") center/auto 100% no-repeat fixed;
+}
+
+.about__body {
+  padding-left: 5%;
+  width: 50%;
+}
+
+.about__body-right {
+  background-color: #aac1aa;
+  padding-right: 5%;
+}
+
+.about__bg {
+  width: 50%;
+  -webkit-clip-path: polygon(26% 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(26% 0, 100% 0, 100% 100%, 0 100%);
+  background: url("../img/contentImg/about.jpg") 0 0/cover no-repeat;
+}
+
+.about__bg2 {
+  width: 50%;
+  -webkit-clip-path: polygon(73% 0, 0 0, 0 100%, 100% 100%);
+          clip-path: polygon(73% 0, 0 0, 0 100%, 100% 100%);
+  background: url("../img/contentImg/about1.jpg") left/cover no-repeat;
+}
+
+.about__bg3 {
+  width: 100%;
+}
+
+.about__bg4 {
+  width: 50%;
+  -webkit-clip-path: polygon(26% 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(26% 0, 100% 0, 100% 100%, 0 100%);
+  background: url("../img/contentImg/about3.jpg") 0 0/cover no-repeat;
 }
