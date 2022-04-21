@@ -1,4 +1,86 @@
+window.onload = function () {
+    // все элементы класса advantages__value
+    let advantagesValues = document.getElementsByClassName("advantages__value");
 
+    // массив для проигрывания анимации только один раз
+    let advantagesValuesDo = [];
+    advantagesValuesDo.length = advantagesValues.length;
+    advantagesValuesDo.fill(true, 0, advantagesValues.length);
+
+    // массив с финальными значениями элементов
+    let advantagesValuesNum = [100, 100, 100];
+
+    // сколько px страницы пролистали
+    let windowOffset = window.pageYOffset;
+
+    // значение скролла в нижней точке страницы
+    let visibleZone = windowOffset + window.innerHeight;
+
+    // проверка видимости элементов класса advantages__value
+    for (let i = 0; i < advantagesValues.length; i++) {
+        // каждый элемент класса advantages__value
+        let elem = document.getElementsByClassName("advantages__value")[i];
+        // какой символ около числа
+        let chr = elem.innerHTML.slice(
+            elem.innerHTML.length - 1,
+            elem.innerHTML.length
+        );
+        // расстояние каждого элемента класса advantages__value от верхней точки страницы
+        let blockOffset =
+            document.getElementsByClassName("advantages__value")[i].offsetTop;
+
+        // вызов анимации, если элемент находится в видимой зоне
+        if (advantagesValuesDo[i] && visibleZone > blockOffset) {
+            advantagesValuesDo[i] = !advantagesValuesDo[i];
+            outNum(elem, chr, advantagesValuesNum[i]);
+        }
+    }
+
+    document.addEventListener("scroll", function () {
+        // сколько px страницы пролистали
+        let windowOffset = window.pageYOffset;
+
+        // значение скролла в нижней точке страницы
+        let visibleZone = windowOffset + window.innerHeight;
+
+        // проверка видимости элементов класса advantages__value
+        for (let i = 0; i < advantagesValues.length; i++) {
+            // каждый элемент класса advantages__value
+            let elem = document.getElementsByClassName("advantages__value")[i];
+            // какой символ около числа
+            let chr = elem.innerHTML.slice(
+                elem.innerHTML.length - 1,
+                elem.innerHTML.length
+            );
+            // расстояние каждого элемента класса advantages__value от верхней точки страницы
+            let blockOffset =
+                document.getElementsByClassName("advantages__value")[i].offsetTop;
+
+            // вызов анимации, если элемент находится в видимой зоне
+            if (advantagesValuesDo[i] && visibleZone > blockOffset) {
+                advantagesValuesDo[i] = !advantagesValuesDo[i];
+                outNum(elem, chr, advantagesValuesNum[i]);
+            }
+        }
+    });
+
+    function outNum(elem, chr, number) {
+        let element = elem;
+        let time = 500;
+        let step = 2;
+        let n = 0;
+        let num = number;
+        let intervalTime = Math.round(time / (num / step));
+        element.innerHTML = n;
+        let interval = setInterval(() => {
+            n = n + step;
+            if (n == num) {
+                clearInterval(interval);
+            }
+            element.innerHTML = n + `${chr}`;
+        }, intervalTime);
+    }
+};
 const mainBlock = document.querySelector(".header__main-block__title");
 const headerContainer = document.querySelector(".header__conteiner");
 document.addEventListener("scroll", function () {
