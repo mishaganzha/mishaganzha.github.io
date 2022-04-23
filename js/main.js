@@ -481,6 +481,94 @@ function TextSelect(thisSelector) {
     }
 }
 //
+const doorsColorBlocks = document.querySelectorAll(".color-items-door");
+const doorTypeBlocks = document.querySelectorAll(".konfig-add__selector");
+const doors = document.querySelectorAll(".color-item__box-door");
+const arrDoorsType = [
+    "010", "410", "515", "700", "810",
+    "504", "568", "680", "697", "860",
+    "189", "302", "304", "308", "686"
+];
+
+const arrDoorsColor = [
+    0, 1, 2, 3, 4, 5,
+    0, 1, 2, 3, 4,
+    0, 1, 2, 3, 4
+];
+const arrNumColor = [0, 6, 11];
+const arrDoorsName = ["Thermo65", "ThermoSafe", "ThermoCarbon"];
+let doorName = 0;
+let doorType = 0;
+let doorColor = 0;
+const doorIcons = document.querySelectorAll(".doorIcon");
+const doorTypes = document.querySelectorAll(".selector-item__img");
+
+
+// При натисканні на тип дверей
+for (let i = 0; i < doorIcons.length; i++) {
+    doorIcons[i].addEventListener('click', function () {
+        for (let i = 0; i < doorIcons.length; i++) {
+            doorIcons[i].classList.remove("doorIcon-active");
+            doorsColorBlocks[i].classList.add("none-colors");
+            doorTypeBlocks[i].classList.add("none-colors");
+        }
+        if (doorIcons[i] == this) {
+            for (let i = 0; i < doorTypes.length; i++) {
+                doorTypes[i].classList.remove("doorIcon-active");
+            }
+            for (let i = 0; i < doors.length; i++) {
+                doors[i].classList.remove("color-active");
+            }
+            for (let i = 0; i < doors.length; i++) {
+                doors[i].classList.remove("color-active");
+            }
+            doorIcons[i].classList.add("doorIcon-active");
+            doorsColorBlocks[i].classList.remove("none-colors");
+            doorTypeBlocks[i].classList.remove("none-colors");
+            doorName = i;
+            doorType = 5 * i;
+            doorColor = 0;
+            doorTypes[doorType].classList.add("doorIcon-active");
+            changeImageDoor();
+            doors[arrNumColor[i]].classList.add("color-active");
+        }
+    });
+}
+
+//При натискані на колір дверей
+for (let i = 0; i < doors.length; i++) {
+    doors[i].addEventListener('click', function () {
+        for (let i = 0; i < doors.length; i++) {
+            doors[i].classList.remove("color-active");
+        }
+        if (doors[i] == this) {
+            doors[i].classList.add("color-active");
+            doorColor = arrDoorsColor[i];
+
+            changeImageDoor();
+        }
+    });
+}
+//При натисканні на мотив
+for (let i = 0; i < doorTypes.length; i++) {
+    doorTypes[i].addEventListener('click', function () {
+        for (let i = 0; i < doorTypes.length; i++) {
+            doorTypes[i].classList.remove("doorIcon-active");
+        }
+        if (doorTypes[i] == this) {
+            doorTypes[i].classList.add("doorIcon-active");
+            doorType = i;
+            changeImageDoor();
+        }
+    });
+}
+//Функція зміни картинки
+
+function changeImageDoor() {
+    document.getElementById("change__image-door").src = "img/konfig/door/" + arrDoorsName[doorName] + "/" + arrDoorsType[doorType] + "/" + doorColor + ".jpg";
+}
+
+//
 new Swiper('.image-slider__conteiner', {
     //стрілки
     navigation: {
