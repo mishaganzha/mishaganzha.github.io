@@ -793,6 +793,11 @@ h6 {
   border: 1px solid #1426c9;
 }
 
+.doorIcon-active {
+  -webkit-box-shadow: 0 0px 30px #1426c9;
+          box-shadow: 0 0px 30px #1426c9;
+}
+
 .image-konfig__img {
   width: 100%;
   text-align: center;
@@ -801,6 +806,16 @@ h6 {
 
 .image-konfig__img img {
   width: 100%;
+}
+
+.image-konfig__img-door {
+  width: 100%;
+  text-align: center;
+  margin: 0px 0px 70px 0;
+}
+
+.image-konfig__img-door img {
+  width: 50%;
 }
 
 .image-konfig__selector-flex {
@@ -841,7 +856,6 @@ h6 {
 }
 
 .color-konfig__colors {
-  overflow-y: scroll;
   max-height: 300px;
   padding-left: 7px;
   padding-top: 7px;
@@ -857,9 +871,24 @@ h6 {
   font-size: 15px;
 }
 
+.thermoCarbon-colors,
+.thermoSafe-colors,
+.thermo65-colors,
+.color-items-door {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .color-items,
 .color-items__m,
 .color-items__s {
+  overflow-y: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -916,6 +945,16 @@ h6 {
   border: 1px solid #1426c9;
   -webkit-box-shadow: 0 0 10px #1426c9;
           box-shadow: 0 0 10px #1426c9;
+}
+
+.color-active {
+  border: 1px solid #1426c9;
+  -webkit-box-shadow: 0 0 10px #1426c9;
+          box-shadow: 0 0 10px #1426c9;
+}
+
+.color00 {
+  background-color: #f7fbf5;
 }
 
 .color1 {
@@ -1098,6 +1137,10 @@ h6 {
   background: url("../img/konfig/garage/colors/30.jpg");
 }
 
+.color100 {
+  background-color: #60453a;
+}
+
 .konfig-add {
   margin-top: 10px;
 }
@@ -1107,16 +1150,30 @@ h6 {
 }
 
 .konfig-add__selector {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.konfig-add__selector p {
-  display: block;
-  font-size: 20px;
-  padding-right: 20px;
+.konfig-add__selector-item {
+  margin-right: 8%;
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+.selector-item__img {
+  height: 80px;
+  cursor: pointer;
+}
+
+.selector-item__img img {
+  height: 100%;
 }
 
 .info__conteiner {
@@ -1160,6 +1217,10 @@ h6 {
 .item-info__active {
   color: #fff;
   background-color: #00558b;
+}
+
+.none-colors {
+  display: none;
 }
 
 .main-title__hormann {
