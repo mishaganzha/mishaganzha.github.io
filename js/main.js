@@ -626,7 +626,7 @@ new Swiper('.image-slider__conteiner', {
     //     eventsTarget: '.image-slider__conteiner'
     // },
     //кількість слайдів для показу
-    slidesPerView: 2.2,
+    slidesPerView: 1.2,
     breakpoints: {
 
         630: {
