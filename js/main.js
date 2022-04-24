@@ -627,6 +627,19 @@ new Swiper('.image-slider__conteiner', {
     // },
     //кількість слайдів для показу
     slidesPerView: 2.2,
+    breakpoints: {
+
+        630: {
+            slidesPerView: 1.2
+        },
+        830: {
+            slidesPerView: 1.8
+        },
+        1100: {
+            slidesPerView: 2.2
+        }
+
+    },
     //відступи між слайдами
     spaceBetween: 30,
     //слайд по центру
