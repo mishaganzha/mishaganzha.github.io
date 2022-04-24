@@ -81,8 +81,16 @@ window.onload = function () {
         }, intervalTime);
     }
 };
+
+const menuList = document.querySelector(".menu__list-block");
 const mainBlock = document.querySelector(".header__main-block__title");
+const menuBtn = document.querySelectorAll(".span");
+const menuBtnBlock = document.querySelector(".menu-btn")
 const headerContainer = document.querySelector(".header__conteiner");
+
+menuBtnBlock.addEventListener('click', function () {
+    menuList.classList.toggle('menu__list-block-active')
+})
 document.addEventListener("scroll", function () {
     if (window.pageYOffset >= 70) {
         headerContainer.classList.add('lock-padding');
@@ -90,7 +98,16 @@ document.addEventListener("scroll", function () {
             "style",
             "margin-top: 80px;"
         );
+        menuList.setAttribute(
+            "style", "background-color:#fff;"
+        )
 
+        for (i = 0; i < menuBtn.length; i++) {
+            menuBtn[i].setAttribute(
+                "style", "background-color:#00558b;"
+            )
+
+        }
 
     } else {
         headerContainer.classList.remove('lock-padding');
@@ -98,9 +115,19 @@ document.addEventListener("scroll", function () {
             "style",
             "margin-top: 0px;"
         );
+        menuList.setAttribute(
+            "style", "background-color:#00558b;"
+        )
+
+        for (i = 0; i < menuBtn.length; i++) {
+            menuBtn[i].setAttribute(
+                "style", "background-color:#fff;"
+            )
+        }
 
     }
 });
+
 function changeItem(thisItem) {
     for (
         let i = 0;
