@@ -82,49 +82,81 @@ window.onload = function () {
     }
 };
 
-const menuList = document.querySelector(".menu__list-block");
+const isMobile = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+        return (
+            isMobile.Android() ||
+            isMobile.BlackBerry() ||
+            isMobile.iOS() ||
+            isMobile.Opera() ||
+            isMobile.Windows());
+
+    }
+};
+
+if (isMobile.any()) {
+    document.body.classList.add('_touch');
+    let menuArrows = document.querySelectorAll('.menu__arrow');
+    if (menuArrows.length > 0) {
+        for (let i = 0; i < menuArrows.length; i++) {
+            const menuArrow = menuArrows[i];
+            menuArrow.addEventListener("click", function (e) {
+                menuArrow.parentElement.classList.toggle('_active');
+            });
+        }
+    }
+} else {
+    document.body.classList.add('_pc');
+}
+
+const IconMenu = document.querySelector(".menu__icon");
+const menuBody = document.querySelector(".menu__body");
+IconMenu.addEventListener("click", function (e) {
+    document.body.classList.toggle("_lock")
+    IconMenu.classList.toggle("_active");
+    menuBody.classList.toggle("_active");
+});
+
 const mainBlock = document.querySelector(".header__main-block__title");
-const menuBtn = document.querySelectorAll(".span");
-const menuBtnBlock = document.querySelector(".menu-btn")
 const headerContainer = document.querySelector(".header__conteiner");
 
-menuBtnBlock.addEventListener('click', function () {
-    menuList.classList.toggle('menu__list-block-active')
-})
 document.addEventListener("scroll", function () {
     if (window.pageYOffset >= 70) {
-        headerContainer.classList.add('lock-padding');
+        headerContainer.setAttribute("style",
+
+            "position: fixed; top:0; left:0; width: 100%;z-index:12;");
+
         mainBlock.setAttribute(
             "style",
             "margin-top: 80px;"
         );
-        menuList.setAttribute(
-            "style", "background-color:#fff;"
-        )
 
-        for (i = 0; i < menuBtn.length; i++) {
-            menuBtn[i].setAttribute(
-                "style", "background-color:#00558b;"
-            )
-
-        }
 
     } else {
-        headerContainer.classList.remove('lock-padding');
-        mainBlock.setAttribute(
-            "style",
-            "margin-top: 0px;"
-        );
-        menuList.setAttribute(
-            "style", "background-color:#00558b;"
-        )
+        if (window.pageYOffset <= 70) {
+            headerContainer.setAttribute("style",
+                "position:static; ");
+            mainBlock.setAttribute(
+                "style",
+                "margin-top: 0px;"
+            );
 
-        for (i = 0; i < menuBtn.length; i++) {
-            menuBtn[i].setAttribute(
-                "style", "background-color:#fff;"
-            )
         }
-
     }
 });
 
