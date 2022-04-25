@@ -1273,6 +1273,15 @@ h6 {
     margin-bottom: 20px;
     width: 100%;
   }
+  .image-konfig__img {
+    width: 100%;
+    text-align: center;
+    margin: 0px 0px 50px 0;
+  }
+  .image-konfig__img img {
+    margin-left: -35%;
+    width: 170%;
+  }
 }
 
 .color-item__kas {
