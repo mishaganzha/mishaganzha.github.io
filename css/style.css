@@ -601,7 +601,7 @@ body._lock {
   color: #aac1aa;
 }
 
-s.lock {
+body.lock {
   overflow: hidden;
 }
 
