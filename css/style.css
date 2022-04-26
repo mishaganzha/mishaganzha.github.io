@@ -312,6 +312,7 @@ body._lock {
 @media (max-width: 930px) {
   .header__conteiner {
     min-height: 50px;
+    margin-bottom: 30px;
   }
   .menu__icon {
     z-index: 12;
