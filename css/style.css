@@ -1293,6 +1293,17 @@ body.lock {
   }
 }
 
+@media (min-width: 630px) {
+  .image-konfig__img-door {
+    width: 100%;
+    text-align: center;
+    margin: 0px 0px 70px 0;
+  }
+  .image-konfig__img-door img {
+    width: 65%;
+  }
+}
+
 .color-item__kas {
   display: none;
 }
