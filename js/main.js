@@ -8,7 +8,7 @@ window.onload = function () {
     advantagesValuesDo.fill(true, 0, advantagesValues.length);
 
     // массив с финальными значениями элементов
-    let advantagesValuesNum = [100, 100, 100];
+    let advantagesValuesNum = [1000, 18, 100];
 
     // сколько px страницы пролистали
     let windowOffset = window.pageYOffset;
